@@ -58,7 +58,7 @@ ENV LANG en_US.utf-8
 
 #Download CMS source. You can change version here. This system was designed to be used with CMS v1.4.
 #RUN wget -qO- https://github.com/cms-dev/cms/releases/download/v1.4.rc1/v1.4.rc1.tar.gz | tar xvz -C /
-RUN git clone --recursive https://github.com/brianbbsu/cms.git /cms/ && cd /cms/ && git checkout  v1.4-cpp14 --
+RUN git clone --recursive https://github.com/brianbbsu/cms.git /cms/ && cd /cms/ && git checkout YTP2020 --
 
 WORKDIR /cms/
 
