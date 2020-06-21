@@ -1,0 +1,42 @@
+version: '3'
+services: 
+  proxy:
+    image: "brianbbsu/cms:YTP2020"
+    network_mode: "host"
+    tty: true
+    restart: unless-stopped
+    volumes: 
+      - "./cms.conf:/usr/local/etc/cms.conf:ro"
+    command: "cmsProxyService"
+  scoring:
+    image: "brianbbsu/cms:YTP2020"
+    network_mode: "host"
+    tty: true
+    restart: unless-stopped
+    volumes: 
+      - "./cms.conf:/usr/local/etc/cms.conf:ro"
+    command: "cmsScoringService"
+  evaluation:
+    image: "brianbbsu/cms:YTP2020"
+    network_mode: "host"
+    tty: true
+    restart: unless-stopped
+    volumes: 
+      - "./cms.conf:/usr/local/etc/cms.conf:ro"
+    command: "cmsEvaluationService"
+  checker:
+    image: "brianbbsu/cms:YTP2020"
+    network_mode: "host"
+    tty: true
+    restart: unless-stopped
+    volumes: 
+      - "./cms.conf:/usr/local/etc/cms.conf:ro"
+    command: "cmsChecker"
+  log:
+    image: "brianbbsu/cms:YTP2020"
+    network_mode: "host"
+    tty: true
+    restart: unless-stopped
+    volumes: 
+      - "./cms.conf:/usr/local/etc/cms.conf:ro"
+    command: "cmsLogService"

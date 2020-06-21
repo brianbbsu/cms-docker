@@ -1,0 +1,11 @@
+version: '3'
+services: 
+  worker:
+    image: "brianbbsu/cms:YTP2020"
+    network_mode: "host"
+    tty: true
+    restart: unless-stopped
+    volumes: 
+      - "./cms.conf:/usr/local/etc/cms.conf:ro"
+    privileged: true
+    command: "cmsWorker 0"
