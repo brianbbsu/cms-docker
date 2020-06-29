@@ -1,6 +1,6 @@
 version: '3'
 services: 
-  contest:
+  contest0:
     image: "brianbbsu/cms:YTP2020"
     network_mode: "host"
     tty: true
@@ -22,5 +22,5 @@ services:
     tty: true
     restart: unless-stopped
     volumes: 
-      - "./cms.conf:/usr/local/etc/cms.conf:ro"
+      - "./cms.ranking.conf:/usr/local/etc/cms.ranking.conf:ro"
     command: "cmsRankingWebServer"
