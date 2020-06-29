@@ -1,6 +1,6 @@
 version: '3'
 services: 
-  worker:
+  worker0:
     image: "brianbbsu/cms:YTP2020"
     network_mode: "host"
     tty: true
