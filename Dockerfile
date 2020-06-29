@@ -67,8 +67,3 @@ RUN python prerequisites.py -y --as-root install && \
     usermod -a -G cmsuser root && \
     python -m pip install --no-cache-dir -r requirements.txt && \
     python setup.py install
-
-#Copy and set execution bit of the start up script.
-COPY startup.sh /startup.sh
-RUN chmod +x /startup.sh
-ENTRYPOINT ["/startup.sh"]
