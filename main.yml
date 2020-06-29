@@ -7,7 +7,7 @@ services:
     restart: unless-stopped
     volumes: 
       - "./cms.conf:/usr/local/etc/cms.conf:ro"
-    command: "cmsProxyService"
+    command: "cmsProxyService -c ${CMS_CONTEST_ID}"
   scoring:
     image: "brianbbsu/cms:YTP2020"
     network_mode: "host"

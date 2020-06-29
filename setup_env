@@ -1,0 +1,7 @@
+if [[ $# -lt 2 || $1 == *.yml || ! $2 =~ ^[0-9]+$ ]]; then
+	echo "Usage: source setup_env <compose_type> <contest_id>"
+else
+	export COMPOSE_FILE="$1.yml"
+	export CMS_CONTEST_ID=$2
+fi
+
